@@ -9,6 +9,7 @@ python = "^3.9"
 selenium = "^3.141.0"
 webdriver-manager = "^3.4.2"
 allure-pytest = "^2.9.43"
+Faker = "^8.12.1"
 
 [tool.poetry.dev-dependencies]
 

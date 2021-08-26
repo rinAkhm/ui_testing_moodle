@@ -1,15 +1,15 @@
 import pytest
-from pages.application import Application
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+from pages.application import Application
 
 
 @pytest.fixture(scope="session")
 def app(request):
     url = request.config.getoption("--base-url")
-    app = Application(webdriver.Chrome(ChromeDriverManager().install()), url)
-    yield app
-    app.quit()
+    fixture = Application(webdriver.Chrome(ChromeDriverManager().install()), url)
+    yield fixture
+    fixture.quit()
 
 
 def pytest_addoption(parser):
@@ -26,5 +26,5 @@ def pytest_addoption(parser):
         help="enter username",
     ),
     parser.addoption(
-        "-password", action="store", defualt="Qwerty@321", help="enter password"
-    )
+        "--password", action="store", default="Qwerty@321", help="enter password"
+    ),
