@@ -1,5 +1,6 @@
-from common.constants import LoginConstants
+from common.constants import LoginConstants, DataConstants
 from models.auth import AuthData
+import pytest
 
 
 class TestAuth:
@@ -11,12 +12,9 @@ class TestAuth:
         3. Check auth result
         """
         app.open_main_page()
-        app.login.auth(login="rin_akhm@bk.ru", password="Qwerty@321")
+        data = AuthData(login="rin_akhm@bk.ru", password="Qwerty@321")
+        app.login.auth(data)
         assert app.login.is_auth(), "We are not auth"
-        app.login.log_out()
-        assert (
-            LoginConstants.MASSAGE_LOGOUT == app.login.check_log_out()
-        ), "We are log out system"
 
     def test_auth_invalid_data(self, app):
         """
@@ -26,5 +24,19 @@ class TestAuth:
         """
         app.open_main_page()
         data = AuthData.generate_data()
-        app.login.auth(login=data.login, password=data.password)
+        app.login.auth(data)
+        assert LoginConstants.MASSAGE_ERROR == app.login.login_error(), "We are auth"
+
+    @pytest.mark.parametrize("param1, param2", DataConstants.data)
+    def test_scope(self, app, param1, param2):
+        """
+        1. Open main page
+        2. Auth with [login and empty password,
+                      empty login and password,
+                      empty login and empty password]
+        3. Check auth result
+        """
+        app.open_main_page()
+        data = AuthData(login=param1, password=param2)
+        app.login.auth(data)
         assert LoginConstants.MASSAGE_ERROR == app.login.login_error(), "We are auth"

@@ -37,7 +37,7 @@ class LoginPage(BasePage):
 
     def exit_system(self) -> WebElement:
         """Field for sign out."""
-        return self.find_element(AuthorizationPageLocators.EXIT)
+        return self.find_element(AuthorizationPageLocators.EXIT_USER_MENU)
 
     def login_error(self):
         return self.find_element(AuthorizationPageLocators.ERROR_INPUT_AUTH).text
@@ -45,14 +45,16 @@ class LoginPage(BasePage):
     def check_log_out(self):
         return self.find_element(AuthorizationPageLocators.CHEK_LOG_OUT).text
 
-    def log_out(self):
+    def find_exit_button(self):
+        return self.find_elements(AuthorizationPageLocators.BUTTON_EXIT)
+
+    def auth(self, data) -> None:
+        """Process authorization in moodle."""
+        if self.find_exit_button():
+            self.click_element(self.find_exit_button()[0])
         if self.is_auth():
             self.click_element(self.user_menu())
             self.click_element(self.exit_system())
-
-    def auth(self, login: str, password: str) -> None:
-        """Process authorization in moodle."""
-        self.log_out()
-        self.fill_element(self.input_username(), login)
-        self.fill_element(self.input_password(), password)
+        self.fill_element(self.input_username(), data.login)
+        self.fill_element(self.input_password(), data.password)
         self.click_element(self.submit_auth_form())

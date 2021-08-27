@@ -1,6 +1,8 @@
 import pytest
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+
+from models.auth import AuthData
 from pages.application import Application
 
 
@@ -12,6 +14,14 @@ def app(request):
     fixture.quit()
 
 
+@pytest.fixture
+def login_system(app, request):
+    user = request.config.getoption("--login")
+    password = request.config.getoption("--password")
+    data = AuthData(login=user, password=password)
+    app.login.auth(data)
+
+
 def pytest_addoption(parser):
     parser.addoption(
         "--base-url",
@@ -20,7 +30,7 @@ def pytest_addoption(parser):
         help="test_moodle_url",
     ),
     parser.addoption(
-        "--username",
+        "--login",
         action="store",
         default="rin_akhm@bk.ru",
         help="enter username",
