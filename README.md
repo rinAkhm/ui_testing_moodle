@@ -1,4 +1,4 @@
-[![Build Status](https://app.travis-ci.com/rinAkhm/ui_testing_moodle.svg?branch=master)](https://travis-ci.org/rinAkhm/ui_testing_moodle)
+[![Build Status](https://app.travis-ci.com/rinAkhm/ui_testing_moodle.svg?branch=develop)](https://app.travis-ci.com/rinAkhm/ui_testing_moodle)
 # Shop test
 UI python tests with selenium http://automationpractice.com/
 
