@@ -1,5 +1,6 @@
 import pytest
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 
 from models.auth import AuthData
@@ -9,7 +10,14 @@ from pages.application import Application
 @pytest.fixture(scope="session")
 def app(request):
     url = request.config.getoption("--base-url")
-    fixture = Application(webdriver.Chrome(ChromeDriverManager().install()), url)
+    chrome_options = Options()
+    chrome_options.headless = True
+    fixture = Application(
+        webdriver.Chrome(
+            ChromeDriverManager().install(), chrome_options=chrome_options
+        ),
+        url,
+    )
     yield fixture
     fixture.quit()
 
