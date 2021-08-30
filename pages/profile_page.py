@@ -1,4 +1,5 @@
 from locators.profile_page import ProfilePageLocators
+
 from pages.base_page import BasePage
 from common.constants import DataConstants
 import random
@@ -39,6 +40,10 @@ class ProfilePage(BasePage):
         """Validation change."""
         text = self.find_element(ProfilePageLocators.CHECKING).text
         return text.strip()
+
+    def user_menu(self):
+        """Board with user menu."""
+        return self.find_element(ProfilePageLocators.USER_MENU)
 
     def choice_country(self):
         """Choice county form constants of list."""

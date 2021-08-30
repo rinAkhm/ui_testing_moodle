@@ -12,3 +12,4 @@ class ProfilePageLocators:
     COUNTRY = (By.ID, "id_country")
     SAVE_PROFILE = (By.ID, "id_submitbutton")
     CHECKING = (By.XPATH, "//span[@class='notifications']/div")
+    USER_MENU = (By.CLASS_NAME, "usermenu")
