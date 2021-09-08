@@ -23,6 +23,7 @@ pip install -r requirements.txt
 pytest -v
 ```
 To install and configure allure, you can help to [link](https://www.youtube.com/watch?v=6qASwPL86MM)
+
 6. For report used Allure need to write command in terminal:
 ```
 pytest --alluredir=report
