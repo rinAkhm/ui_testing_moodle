@@ -1,0 +1,56 @@
+allure-pytest @ file:///C:/Users/r.akhmetzyanov/AppData/Local/pypoetry/Cache/artifacts/ad/72/50/79ce78f73444bb6fe955396c6d8ef1ad78f638d6e3b6f76aa061b97023/allure_pytest-2.9.43-py3-none-any.whl
+allure-python-commons @ file:///C:/Users/r.akhmetzyanov/AppData/Local/pypoetry/Cache/artifacts/cc/c7/ff/47fccf92f366ee8dd43da32c7c033e2b469fa5be043e8bbcc4cff86f3f/allure_python_commons-2.9.43-py3-none-any.whl
+atomicwrites==1.4.0
+attrs==21.2.0
+backports.entry-points-selectable==1.1.0
+CacheControl==0.12.6
+cachy==0.3.0
+certifi==2021.5.30
+cfgv==3.3.0
+charset-normalizer==2.0.4
+cleo==0.8.1
+clikit==0.6.2
+colorama==0.4.4
+configparser==5.0.2
+crashtest==0.3.1
+crayons==0.4.0
+distlib==0.3.2
+Faker @ file:///C:/Users/r.akhmetzyanov/AppData/Local/pypoetry/Cache/artifacts/3b/c3/92/dcd4497e10f69cb9c38ad17c0f083934035acc24e6fa37867d2517773b/Faker-8.12.1-py3-none-any.whl
+filelock==3.0.12
+html5lib==1.1
+identify==2.2.13
+idna==3.2
+iniconfig==1.1.1
+keyring==21.8.0
+lockfile==0.12.2
+msgpack==1.0.2
+nodeenv==1.6.0
+packaging @ file:///C:/Users/r.akhmetzyanov/AppData/Local/pypoetry/Cache/artifacts/f9/4f/09/c91a145b26102e014fd6e33bd8c7b87306c8e1d4a771158f34dd13210e/packaging-21.0-py3-none-any.whl
+pastel==0.2.1
+pexpect==4.8.0
+pkginfo==1.7.1
+platformdirs==2.2.0
+pluggy==0.13.1
+poetry==1.1.8
+poetry-core==1.0.4
+pre-commit==2.14.0
+ptyprocess==0.7.0
+py==1.10.0
+pylev==1.4.0
+pyparsing==2.4.7
+pytest==6.2.4
+python-dateutil @ file:///C:/Users/r.akhmetzyanov/AppData/Local/pypoetry/Cache/artifacts/53/f8/2a/7d63ce15df7386e9536e83413453f8aa845b47fb425f05c4ca2fb231c3/python_dateutil-2.8.2-py2.py3-none-any.whl
+pywin32-ctypes==0.2.0
+PyYAML==5.4.1
+requests==2.26.0
+requests-toolbelt==0.9.1
+selenium==3.141.0
+shellingham==1.4.0
+six==1.16.0
+text-unidecode @ file:///C:/Users/r.akhmetzyanov/AppData/Local/pypoetry/Cache/artifacts/34/f9/c2/484c44b08bab89d472229bbd257fcc1d1c6273ee027f01cb08c4e3c309/text_unidecode-1.3-py2.py3-none-any.whl
+toml==0.10.2
+tomlkit==0.7.2
+urllib3==1.26.6
+virtualenv==20.7.2
+webdriver-manager==3.4.2
+webencodings==0.5.1
