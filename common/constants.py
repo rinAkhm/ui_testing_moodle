@@ -5,20 +5,13 @@ class LoginConstants:
 
 class DataConstants:
     data = [
-        ("login", ""),
-        ("", "password"),
+        ("marko@yandex.ru", ""),
+        ("", "DHJ314@33"),
         ("", ""),
     ]
 
-    country_list = [
-        "Австралия",
-        "Бельгия",
-        "Египет",
-        "Испания",
-        "Россия",
-        "Румыния",
-        "Словакия",
-        "Украина",
-        "Узбекистан",
-        "Франция",
-    ]
+    country_list = ["AU", "BG", "HR", "CZ", "RU", "PL"]
+
+    time_zone = ["Australia/Adelaide", "Asia/Tokyo", "Europe/Moscow"]
+
+    email_mod = ["0", "1", "2"]

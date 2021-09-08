@@ -1,3 +1,5 @@
+import logging
+
 from pages.login_page import LoginPage
 from pages.profile_page import ProfilePage
 
@@ -14,3 +16,10 @@ class Application:
 
     def quit(self):
         self.driver.quit()
+
+    def make_screenshot(self):
+        return self.driver.get_screenshot_as_png()
+
+    @staticmethod
+    def logger():
+        return logging.getLogger("moodle")
