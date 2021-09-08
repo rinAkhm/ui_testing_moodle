@@ -10,13 +10,21 @@ This is project used for training test UI. Just used Selenium
 ```
 python -m venv venv
 ```
+3. Clone repository on your machine
+```
+git clone https://github.com/rinAkhm/ui_testing_moodle.git
+```
 4. Before run beginning you need install packets. Run in terminal
 ```
 pip install -r requirements.txt
 ```
-5. Run tests from the folder **tests** with pytest or use **make pytest**
-6. For report used Allure http://allure.qatools.ru/
-
-
-### Login Information
-rin_akhm@bk.ru / Qwerty@321
+5. For Run tests need to write command in terminal:
+```
+pytest -v
+```
+To install and configure allure, you can help to [link](https://www.youtube.com/watch?v=6qASwPL86MM)
+6. For report used Allure need to write command in terminal:
+```
+pytest --alluredir=report
+allure serve report
+```

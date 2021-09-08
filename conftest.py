@@ -17,7 +17,7 @@ def app(request):
     Application.logger().info(f'Start browser = url is "{url}"')
     options = Options()
     options.add_argument("--start-maximized")
-    options.headless = False
+    options.headless = True
     fixture = Application(
         webdriver.Chrome(ChromeDriverManager().install(), options=options), url
     )
