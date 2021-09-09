@@ -1,5 +1,6 @@
 import logging
 
+from pages.crud_course import AddCourse
 from pages.login_page import LoginPage
 from pages.profile_page import ProfilePage
 
@@ -10,6 +11,7 @@ class Application:
         self.url = url
         self.login = LoginPage(self)
         self.profile = ProfilePage(self)
+        self.course = AddCourse(self)
 
     def open_main_page(self):
         self.driver.get(self.url + "/login/index.php")
