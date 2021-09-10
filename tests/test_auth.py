@@ -2,9 +2,6 @@ from common.constants import LoginConstants, DataConstants
 from models.auth import AuthData
 import pytest
 import allure
-import logging
-
-logger = logging.getLogger("moodle")
 
 
 class TestAuth:

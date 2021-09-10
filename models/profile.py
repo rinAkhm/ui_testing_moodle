@@ -51,9 +51,19 @@ class ProfileData:
         )
 
     def images(self):
-        files = random.choice(["image1.jpg", "image2.jpg"])
+        files = random.choice(
+            [
+                "image1.jpg",
+                "image2.jpg",
+                "image3.jpg",
+                "image4.jpg",
+                "image5.jpg",
+                "image6.jpg",
+            ]
+        )
+        path = "images"
+        file = f"{files}"
         image = os.path.join(
-            os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-            fr"images/{files}",
+            os.path.dirname(os.path.dirname(os.path.abspath(__file__))), path, file
         )
         return image
