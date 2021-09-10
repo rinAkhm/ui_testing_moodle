@@ -61,8 +61,9 @@ class ProfileData:
                 "image6.jpg",
             ]
         )
+        path = "images"
+        file = f"{files}"
         image = os.path.join(
-            os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-            fr"image/{files}",
+            os.path.dirname(os.path.dirname(os.path.abspath(__file__))), path, file
         )
         return image

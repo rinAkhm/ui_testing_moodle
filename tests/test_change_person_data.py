@@ -1,6 +1,5 @@
 import pytest
 
-from models.auth import AuthData
 from models.profile import ProfileData as PD
 
 from pages.application import Application
@@ -10,9 +9,7 @@ class TestChangeProfileData:
     """Change data profile."""
 
     @pytest.mark.profile_data
-    def test_change_profile(
-        self, app: Application, get_auth_data: AuthData, login_up: None
-    ) -> None:
+    def test_change_profile(self, app: Application, login_up: None) -> None:
         """
         Steps:
         1. Open main page

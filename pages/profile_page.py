@@ -1,3 +1,5 @@
+import time
+
 from locators.profile_page import ProfilePageLocators, ErrorMassagePageLocators
 from selenium.webdriver.remote.webelement import WebElement
 from models.profile import ProfileData
@@ -95,8 +97,11 @@ class ProfilePage(BasePage):
     def input_image(self, path):
         """Set image profile."""
         self.click_element(self.image_file_download())
+        time.sleep(2)
         self.fill_element(self.input_file_image(), path)
+        time.sleep(2)
         self.click_element(self.upload_image_file())
+        time.sleep(2)
 
     def change_profile_data(self, data: ProfileData) -> None:
         """Input data."""
