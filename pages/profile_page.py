@@ -114,10 +114,10 @@ class ProfilePage(BasePage):
         self.fill_element(self.input_lastname(), data.lastname)
         self.fill_element(self.input_city(), data.city)
         self.fill_element(self.input_url_profile(), data.moodle_net)
+        self.select_email_mod(data.email_mod)
         self.select_country(data.country)
         self.select_timezone(data.timezone)
         self.input_image(data.image)
-        self.select_email_mod(data.email_mod)
         self.click_element(self.submit_save())
 
     def error_input_firstname(self):

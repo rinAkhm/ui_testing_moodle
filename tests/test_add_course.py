@@ -1,3 +1,6 @@
+import allure
+import pytest
+
 from models.add_course import CourseData
 from pages.application import Application
 
@@ -5,6 +8,8 @@ from pages.application import Application
 class TestAddCourse:
     """Contain tests create and delete course."""
 
+    @pytest.mark.add_course
+    @allure.title("Create new course")
     def test_add_course(self, app: Application, login_up: None) -> None:
         """
         Steps:
@@ -21,6 +26,8 @@ class TestAddCourse:
             app.course.find_course_name() == f"{data.full_name}"
         ), "Course not created"
 
+    @pytest.mark.add_course
+    @allure.title("Delete course")
     def test_delete_course(self, app: Application, login_up: None) -> None:
         """
         Steps:
