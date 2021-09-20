@@ -1,8 +1,13 @@
 [![Build Status](https://app.travis-ci.com/rinAkhm/ui_testing_moodle.svg?branch=master)](https://app.travis-ci.com/rinAkhm/ui_testing_moodle)
 # Lms Moodle testing 
-UI python tests with selenium http://automationpractice.com/
+UI python tests with https://qacoursemoodle.innopolis.university
 
 This is project used for training test UI. Just used Selenium
+
+Purposes:
+1. write autotests for authorization
+2. write autotests changing profile data
+3. write autotests for creating a course.
 
 ### How to Quickstart
 1. Use python 3.9
