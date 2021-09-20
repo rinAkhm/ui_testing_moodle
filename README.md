@@ -1,5 +1,5 @@
 [![Build Status](https://app.travis-ci.com/rinAkhm/ui_testing_moodle.svg?branch=master)](https://app.travis-ci.com/rinAkhm/ui_testing_moodle)
-# Shop test
+# Lms Moodle testing 
 UI python tests with selenium http://automationpractice.com/
 
 This is project used for training test UI. Just used Selenium
